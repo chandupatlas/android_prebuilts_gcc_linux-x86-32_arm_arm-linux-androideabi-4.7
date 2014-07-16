@@ -1,0 +1,35 @@
+android_prebuilts_gcc_linux-x86-32_arm_arm-linux-androideabi-4.7
+================================================================
+
+
+Linux/x86 32-bit gcc/binutils for arm-linux-androideabi-4.7
+
+Usage
+=====
+
+- Put
+  < project
+    name="chandupatlas/android_prebuilts_gcc_linux-x86-32_arm_arm-linux-androideabi-4.7"
+    path="prebuilts/gcc/linux-x86-32/arm/arm-linux-androideabi-4.7" / > 
+
+ to your .repo/local_manifest.xml
+
+
+Building
+========
+
+TOOLCHAIN_PATH = $ANDROID_BUILD_TOP
+
+TOOLCHAIN_PATH=/tmp/toolchain-source
+
+cd $A/ndk/build/tools
+
+./download-toolchain-sources.sh $TOOLCHAIN_PATH
+
+cd $ANDROID_SRC_PATH/ndk/build/tools
+
+./gen-platforms.sh --minimal
+
+./build-gcc.sh $TOOLCHAIN_PATH $TOOLCHAIN_PATH/ndk arm-linux-androideabi-4.7
+
+# find your output in $A/ndk/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86
