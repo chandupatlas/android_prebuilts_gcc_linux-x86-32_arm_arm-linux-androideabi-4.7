@@ -30,6 +30,6 @@ cd $ANDROID_SRC_PATH/ndk/build/tools
 
 ./gen-platforms.sh --minimal
 
-./build-gcc.sh $TOOLCHAIN_PATH $TOOLCHAIN_PATH/ndk arm-linux-androideabi-4.7
+./build-gcc.sh $TOOLCHAIN_PATH $ANDROID_SRC_PATH/ndk arm-linux-androideabi-4.7
 
 # find your output in $ANDROID_SRC_PATH/ndk/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86
