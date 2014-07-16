@@ -18,11 +18,11 @@ Usage
 Building
 ========
 
-TOOLCHAIN_PATH = $ANDROID_BUILD_TOP
+ANDROID_SRC_PATH = $ANDROID_BUILD_TOP
 
 TOOLCHAIN_PATH=/tmp/toolchain-source
 
-cd $A/ndk/build/tools
+cd $ANDROID_SRC_PATH/ndk/build/tools
 
 ./download-toolchain-sources.sh $TOOLCHAIN_PATH
 
@@ -32,4 +32,4 @@ cd $ANDROID_SRC_PATH/ndk/build/tools
 
 ./build-gcc.sh $TOOLCHAIN_PATH $TOOLCHAIN_PATH/ndk arm-linux-androideabi-4.7
 
-# find your output in $A/ndk/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86
+# find your output in $ANDROID_SRC_PATH/ndk/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86
